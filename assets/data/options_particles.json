@@ -98,6 +98,7 @@
       }
     },
     "interactivity": {
+      "detectsOn": "parent",
       "events": {
         "onHover": {
           "enable": true,
