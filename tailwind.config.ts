@@ -7,6 +7,10 @@ export default <Partial<Config>>{
             colors: {
                 primary: "#22201F"
             },
+            boxShadow: {
+                rounded: '0 0 7px',
+                rounded2: '0 0 24px'
+            },
             keyframes: {
                 typing: {
                     "0%": {

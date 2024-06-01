@@ -10,5 +10,6 @@ html {
   overflow: scroll;
   scrollbar-color: red orange;
   scrollbar-width: thin;
+  /* scroll-behavior: smooth; */
 }
 </style>

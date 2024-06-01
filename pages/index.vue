@@ -1,8 +1,16 @@
 <script lang="ts" setup>
+const { scrollToAnchor, scrollToTop } = useAnchorScroll({
+  toTop: {
+    scrollOptions: {
+      behavior: 'smooth',
+      offsetTop: 0,
+    }
+  },
+})
 </script>
 
 <template>
-  <Home />
+  <Home :scrollToAnchor="scrollToAnchor" />
   <AboutMe />
 </template>
 
