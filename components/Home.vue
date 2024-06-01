@@ -76,16 +76,18 @@ onUpdated(() => {
   <div class="bg-primary" id="home">
     <Header :scrollToAnchor="scrollToAnchor" />
     <div class="absolute flex flex-col justify-center bg-transparent w-full h-screen">
-      <div class="ms-[50%] self-start font-mono z-10">
-        <div class="transition ease-in-out flex flex-col text-5xl"
-          :class="showMe ? 'translate-x-[13rem] opacity-100' : 'opacity-0'">
+      <div class="self-center font-mono z-10 max-[1024px]:text-center">
+        <div class="transition ease-in-out flex flex-col text-5xl max-[450px]:text-lg max-[1024px]:text-2xl"
+          :class="showMe ? 'translate-x-[22rem] max-[1024px]:translate-y-[18vh] max-[1024px]:-translate-x-[0rem] max-[450px]:translate-y-[22vh] max-[450px]:-translate-x-[0rem] opacity-100' : 'opacity-0'">
           <span class="text-white z-10">I'm Niko, a</span>
-          <span
-            class="absolute mt-12 animate-blink overflow-hidden whitespace-nowrap border-r-4 border-r-green-500 text-green-500 z-10">
-            {{ myRole }}
-          </span>
+          <div class="max-[1024px]:-ms-[60%] max-[450px]:-ms-[50%]">
+            <span
+              class="absolute animate-blink overflow-hidden whitespace-nowrap border-r-4 border-r-green-500 text-green-500 z-10">
+              {{ myRole }}
+            </span>
+          </div>
           <div class="mt-12">
-            <a class="bg-black hover:bg-green-500 text-white rounded-full py-3 px-5 text-[17px] me-5 hover:cursor-pointer [&>*]:hover:animate-bounce hover:shadow-rounded hover:shadow-green-500"
+            <a class="bg-black hover:bg-green-500 text-white rounded-full py-3 px-5 text-[17px] me-5 max-[1024px]:me-0 hover:cursor-pointer [&>*]:hover:animate-bounce hover:shadow-rounded hover:shadow-green-500"
               @click="scrollToAnchor?.('about')">
               <span>About Me</span>
               <fa-layers class="ms-3 fa-1x">
@@ -102,66 +104,69 @@ onUpdated(() => {
           </div>
         </div>
       </div>
-      <div class="absolute ms-[50%] socials">
+      <div class="absolute self-center socials">
         <ul class="social-icons bg-transparent w-auto">
           <li>
             <a class="absolute linkedin transition ease-in-out z-10 rounded-full bg-black hover:bg-green-500 hover:shadow-rounded hover:shadow-green-500"
-              :class="showMe ? '-translate-x-[15rem] -translate-y-[10rem]' : 'opacity-0'" aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/niko-prayoga-wiratama-184b37133/" target="_blank">
+              :class="showMe ? '-translate-x-[15rem] -translate-y-[10rem] max-[1024px]:-translate-x-[15rem] max-[1024px]:-translate-y-[5rem] max-[450px]:-translate-x-[10.5rem] max-[450px]:-translate-y-[2.5rem]' : 'opacity-0'"
+              aria-label="LinkedIn" href="https://www.linkedin.com/in/niko-prayoga-wiratama-184b37133/" target="_blank">
               <fa-layers class="fa-4x">
-                <fa :icon="['fab', 'linkedin']" transform="left-1 shrink-6" :style="{ color: 'white' }" />
+                <fa :icon="['fab', 'linkedin']" transform="shrink-6" :style="{ color: 'white' }"
+                  viewBox="0 0 512 512" />
               </fa-layers>
             </a>
           </li>
           <li><a
               class="absolute github transition ease-in-out z-10 rounded-full bg-black hover:bg-green-500 hover:shadow-rounded hover:shadow-green-500"
-              :class="showMe ? '-translate-x-[16.8rem] -translate-y-[5rem]' : 'opacity-0'" aria-label="GitHub"
-              href="https://github.com/nikophreaker" target="_blank">
+              :class="showMe ? '-translate-x-[16.8rem] -translate-y-[5rem] max-[1024px]:-translate-x-[12.5rem] max-[1024px]:-translate-y-[10rem] max-[450px]:-translate-x-[9rem] max-[450px]:-translate-y-[7.5rem]' : 'opacity-0'"
+              aria-label="GitHub" href="https://github.com/nikophreaker" target="_blank">
               <fa-layers class="fa-4x">
-                <fa :icon="['fab', 'github']" transform="shrink-6" :style="{ color: 'white' }" />
+                <fa :icon="['fab', 'github']" transform="shrink-6" :style="{ color: 'white' }" viewBox="0 0 512 512" />
               </fa-layers>
             </a>
           </li>
           <li><a
               class="absolute twitter transition ease-in-out z-10 rounded-full bg-black hover:bg-green-500 hover:shadow-rounded hover:shadow-green-500"
-              :class="showMe ? '-translate-x-[17rem] translate-y-[0.2rem]' : 'opacity-0'" aria-label="Twitter"
-              href="https://twitter.com/nikxpw" target="_blank">
+              :class="showMe ? '-translate-x-[17rem] translate-y-[0.2rem] max-[1024px]:-translate-x-[8.5rem] max-[1024px]:-translate-y-[14rem] max-[450px]:-translate-x-[5rem] max-[450px]:-translate-y-[11rem]' : 'opacity-0'"
+              aria-label="Twitter" href="https://twitter.com/nikxpw" target="_blank">
               <fa-layers class="fa-4x">
-                <fa :icon="['fab', 'twitter']" transform="shrink-6" :style="{ color: 'white' }" />
+                <fa :icon="['fab', 'twitter']" transform="shrink-6" :style="{ color: 'white' }" viewBox="0 0 512 512" />
               </fa-layers>
             </a>
           </li>
           <li><a
               class="absolute facebook transition ease-in-out z-10 rounded-full bg-black hover:bg-green-500 hover:shadow-rounded hover:shadow-green-500"
-              :class="showMe ? '-translate-x-[15.5rem] translate-y-[5.3rem]' : 'opacity-0'" aria-label="Facebook"
-              href="https://www.facebook.com/what.youyogafristone" target="_blank">
+              :class="showMe ? '-translate-x-[15.5rem] translate-y-[5.3rem] max-[1024px]:translate-x-[3.5rem] max-[1024px]:-translate-y-[14rem] max-[450px]:translate-x-[1rem] max-[450px]:-translate-y-[11rem]' : 'opacity-0'"
+              aria-label="Facebook" href="https://www.facebook.com/what.youyogafristone" target="_blank">
               <fa-layers class="fa-4x">
-                <fa :icon="['fab', 'facebook']" transform="shrink-6" :style="{ color: 'white' }" />
+                <fa :icon="['fab', 'facebook']" transform="shrink-6" :style="{ color: 'white' }"
+                  viewBox="0 0 512 512" />
               </fa-layers>
             </a>
           </li>
           <li><a
               class="absolute instagram transition ease-in-out z-10 rounded-full bg-black hover:bg-green-500 hover:shadow-rounded hover:shadow-green-500"
-              :class="showMe ? '-translate-x-[12.6rem] translate-y-[9.6rem]' : 'opacity-0'" aria-label="Instagram"
-              href="https://www.instagram.com/nikxpw" target="_blank">
+              :class="showMe ? '-translate-x-[12.6rem] translate-y-[9.6rem] max-[1024px]:translate-x-[8.2rem] max-[1024px]:-translate-y-[10rem] max-[450px]:translate-x-[5rem] max-[450px]:-translate-y-[7.5rem]' : 'opacity-0'"
+              aria-label="Instagram" href="https://www.instagram.com/nikxpw" target="_blank">
               <fa-layers class="fa-4x">
-                <fa :icon="['fab', 'instagram']" transform="left-1 shrink-6" :style="{ color: 'white' }" />
+                <fa :icon="['fab', 'instagram']" transform="shrink-6" :style="{ color: 'white' }"
+                  viewBox="0 0 512 512" />
               </fa-layers>
             </a>
           </li>
           <li><a
               class="absolute medium transition ease-in-out z-10 rounded-full bg-black hover:bg-green-500 hover:shadow-rounded hover:shadow-green-500"
-              :class="showMe ? '-translate-x-[8.4rem] translate-y-[12.6rem]' : 'opacity-0'" aria-label="Medium"
-              href="https://medium.com/@nikx449" target="_blank">
+              :class="showMe ? '-translate-x-[8.4rem] translate-y-[12.6rem] max-[1024px]:translate-x-[10.5rem] max-[1024px]:-translate-y-[5rem] max-[450px]:translate-x-[6.5rem] max-[450px]:-translate-y-[2.5rem]' : 'opacity-0'"
+              aria-label="Medium" href="https://medium.com/@nikx449" target="_blank">
               <fa-layers class="fa-4x">
-                <fa :icon="['fab', 'medium']" transform="shrink-8" :style="{ color: 'white' }" />
+                <fa :icon="['fab', 'medium']" transform="shrink-8" :style="{ color: 'white' }" viewBox="0 0 512 512" />
               </fa-layers>
             </a>
           </li>
         </ul>
       </div>
       <img
-        class="absolute self-center z-30 w-60 md:w-80 lg:w-96 rounded-full shadow-rounded hover:shadow-rounded2 hover:shadow-green-500 hover:cursor-pointer select-none"
+        class="absolute self-center z-30 w-96 max-[1024px]:w-80 max-[450px]:w-48 rounded-full shadow-rounded hover:shadow-rounded2 hover:shadow-green-500 hover:cursor-pointer select-none"
         src="~/assets/image/nikx.jpg" @click="toggleShow" draggable="false" />
     </div>
     <NuxtParticles id="tsparticles" :url=urlParticleOptions @load="onLoad" class="w-full relative h-screen">

@@ -4,6 +4,38 @@ defineProps({
     type: Function,
   }
 });
+var showMenu = useState('showMenu', () => false);
+function toggleMenu() { showMenu.value = !showMenu.value; }
+var menu = [
+  {
+    title: 'Home',
+    id: 'home'
+  },
+  {
+    title: 'About',
+    id: 'about'
+  },
+  {
+    title: 'Skill',
+    id: 'skill'
+  },
+  {
+    title: 'Education',
+    id: 'education'
+  },
+  {
+    title: 'Project',
+    id: 'project'
+  },
+  {
+    title: 'Experience',
+    id: 'experience'
+  },
+  {
+    title: 'Contact',
+    id: 'contact'
+  }
+];
 </script>
 
 <template>
@@ -12,7 +44,7 @@ defineProps({
   </div> -->
 
   <header
-    class="bg-[#22201F]/75 py-5 backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px fixed top-0 left-0 right-0 z-50 lg:mb-0 lg:border-0">
+    class="bg-[#22201F]/75 py-5 backdrop-blur border-b border-gray-200 dark:border-green-700 -mb-px fixed top-0 left-0 right-0 z-50 lg:mb-0 lg:border-0">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3 h-[--header-height]">
       <div class="lg:flex-1 flex items-center gap-1.5">
         <div class="relative inline-flex text-left rtl:text-right">
@@ -45,17 +77,17 @@ defineProps({
         </div>
       </div>
       <ul class="text-white items-center gap-x-8 hidden lg:flex">
-        <li class="relative">
+        <li v-for="(item, index) in menu" :key="index" class="relative">
           <div class="relative">
             <div class="inline-flex w-full" role="button">
               <a class="text-sm/6 font-semibold flex items-center gap-1 hover:text-green-500"
-                @click="scrollToAnchor?.('home')">
-                Home
+                @click="scrollToAnchor?.(item.id)">
+                {{ item.title }}
               </a>
             </div>
           </div>
         </li>
-        <li class="relative">
+        <!-- <li class="relative">
           <div class="relative">
             <div class="inline-flex w-full" role="button">
               <a class="text-sm/6 font-semibold flex items-center gap-1 hover:text-green-500"
@@ -114,7 +146,7 @@ defineProps({
               </a>
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
       <div class="flex items-center justify-end lg:flex-1 gap-1.5">
         <!-- <div class="relative inline-flex"><button type="button"
@@ -127,11 +159,24 @@ defineProps({
             aria-label="Switch to light mode"><span class="i-ph-moon-duotone flex-shrink-0 h-5 w-5"
               aria-hidden="true"></span></button></div> -->
         <!-- <div class="relative inline-flex"><span class="font-medium text-white">Niko</span></div> -->
-        <!-- <button type="button"
-          class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center lg:hidden"
-          aria-label="Open Menu"><span class="i-ph-list flex-shrink-0 h-5 w-5" aria-hidden="true"></span></button> -->
+        <!-- Mobile nav list -->
+        <button type="button"
+          class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-green-500 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center lg:hidden"
+          aria-label="Open Menu" @click="toggleMenu">
+          <fa icon="fa-bars" />
+        </button>
       </div>
     </div>
+    <nav v-show="showMenu" class="w-full m-5">
+      <ul class="flex flex-col text-center">
+        <li v-for="(item, index) in menu" :key="index">
+          <a @click="scrollToAnchor?.(item.id); toggleMenu();"
+            class="text-white text-sm/6 font-semibold flex items-center gap-1 hover:text-green-500">
+            {{ item.title }}
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 

@@ -10,12 +10,12 @@ export default defineNuxtConfig({
   ],
   fontawesome: {
     icons: {
-      solid: ['circle', 'calendar', 'check', 'id-badge', 'hand-point-down', 'fa-user'],
+      solid: ['circle', 'calendar', 'check', 'id-badge', 'hand-point-down', 'fa-user', 'fa-bars'],
       regular: [],
       brands: ['facebook', 'twitter', 'instagram', 'linkedin', 'github', 'medium']
     },
     component: 'fa',
-    suffix: false
+    suffix: false,
   },
   anchorscroll: {
     hooks: [
