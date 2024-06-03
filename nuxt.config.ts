@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "nuxt-particles",
     "@vesp/nuxt-fontawesome",
     "nuxt-anchorscroll",
+    "@nuxt/image"
   ],
   fontawesome: {
     icons: {
