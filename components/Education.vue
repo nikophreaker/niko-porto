@@ -2,7 +2,7 @@
 
 <template>
   <div class="min-h-screen bg-white" id="education">
-    <div class="text-center py-20 flex flex-col">
+    <div class="text-center py-20 flex flex-col items-center">
       <fa icon="fa-user-graduate" size="3x" color="green" />
       <span class="text-3xl font-bold font-mono max-[450px]:text-2xl"><a class="text-green-700">My Edu</a>cation</span>
       <div

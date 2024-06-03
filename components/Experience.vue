@@ -29,7 +29,7 @@ const experiences = [
 
 <template>
   <div class="min-h-screen bg-white" id="experience">
-    <div class="text-center py-20 flex flex-col">
+    <div class="text-center py-20 flex flex-col items-center">
       <fa icon="fa-fa-briefcase" size="3x" color="green" />
       <span class="text-3xl font-bold font-mono max-[450px]:text-2xl"><a class="text-green-700">My Exp</a>erience</span>
       <div v-for="(item, index) in experiences" :key="index" class="items-center w-[60%] rounded-xl mx-auto d-block flex flex-row max-[450px]:flex-col border shadow-lg shadow-gray-400
