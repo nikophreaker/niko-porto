@@ -32,7 +32,7 @@ const experiences = [
     <div class="text-center py-20 flex flex-col items-center">
       <fa icon="fa-fa-briefcase" size="3x" color="green" />
       <span class="text-3xl font-bold font-mono max-[450px]:text-2xl"><a class="text-green-700">My Exp</a>erience</span>
-      <div v-for="(item, index) in experiences" :key="index" class="items-center w-[60%] rounded-xl mx-auto d-block flex flex-row max-[450px]:flex-col border shadow-lg shadow-gray-400
+      <div v-for="(item, index) in experiences" :key="index" class="items-center w-[60%] max-[450px]:w-[85%] rounded-xl mx-auto d-block flex flex-row max-[450px]:flex-col border shadow-lg shadow-gray-400
         my-5 max-[450px]:mx-5">
         <div
           class="flex flex-col gap-2 py-5 ps-5 pe-12 items-start font-mono max-[450px]:pe-5 max-[450px]:items-center">
