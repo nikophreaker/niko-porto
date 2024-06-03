@@ -95,7 +95,7 @@ onUpdated(() => {
               </fa-layers>
             </a>
             <a class="bg-green-700 hover:bg-green-500 text-white rounded-full py-3 px-5 text-[17px] hover:cursor-pointer [&>*]:hover:animate-bounce hover:shadow-rounded hover:shadow-green-500"
-              @click="scrollToAnchor?.('about')">
+              @click="scrollToAnchor?.('contact')">
               <span>Reach Me</span>
               <fa-layers class="ms-3 fa-1x">
                 <fa icon="hand-point-down"></fa>

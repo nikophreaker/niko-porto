@@ -10,7 +10,9 @@ export default defineNuxtConfig({
   ],
   fontawesome: {
     icons: {
-      solid: ['circle', 'calendar', 'check', 'id-badge', 'hand-point-down', 'fa-user', 'fa-bars'],
+      solid: ['circle', 'calendar', 'check', 'id-badge', 'hand-point-down', 'fa-user', 'fa-bars', 'fa-code',
+        'fa-laptop-code', 'fa-user-graduate', 'fa-eye', 'fa-briefcase', 'fa-envelope', 'fa-map-location-dot',
+        'fa-square-caret-down', 'fa-phone'],
       regular: [],
       brands: ['facebook', 'twitter', 'instagram', 'linkedin', 'github', 'medium']
     },
