@@ -14,7 +14,7 @@ const experiences = [
   },
   {
     title: 'Mobile Apps Developer',
-    duration: 'Mar 2022 - May 2023 · 2 yrs 3 mos',
+    duration: 'Mar 2021 - May 2023 · 2 yrs 3 mos',
     company: 'PT. Provido Indo Digital',
     location: 'North Jakarta, Jakarta, Indonesia · On-site'
   },
