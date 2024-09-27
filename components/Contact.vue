@@ -10,7 +10,7 @@
         <div
           class="bg-green-800 p-3 col-span-2 max-[1024px]:col-span-2 max-[450px]:col-span-0 rounded text-center items-center justify-center content-center flex flex-row hover:cursor-pointer hover:shadow-rounded hover:bg-green-500 hover:shadow-green-500 transition duration-300 ">
           <fa class="me-3" icon="fa-envelope" size="lg" style="color: white;" />
-          <span class="text-white max-[450px]:text-sm font-mono">nikx449@gmail.com</span>
+          <span class="text-white max-[450px]:text-sm font-mono">nikx448@gmail.com</span>
         </div>
         <div
           class="bg-green-800 p-3 col-span-2 max-[1024px]:col-span-2 max-[450px]:col-span-0 rounded text-center items-center justify-center content-center flex flex-row hover:cursor-pointer hover:shadow-rounded hover:bg-green-500 hover:shadow-green-500 transition duration-300 ">
